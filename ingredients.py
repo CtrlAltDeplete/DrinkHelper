@@ -8,6 +8,7 @@ spirits = [
     'dark rum',
     'spiced rum',
     'light rum',
+    'rum',
     'bourbon',
     'brandy',
     'canadian whiskey',
@@ -75,7 +76,7 @@ others = [
     'peach',
     'pineapple',
     'fresh mint',
-    'white sugar',
+    'sugar',
     'powdered sugar',
     'celery salt'
 ]
