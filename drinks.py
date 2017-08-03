@@ -1,6 +1,3 @@
-import ingredients
-import copy
-
 class Drink:
     def __init__(self, name: str, ingredients: list, directions: list):
         self.name = name
@@ -15,17 +12,6 @@ class Drink:
         for direction in self.directions:
             s += '\n' + direction
         return s
-
-    def get_ingredients(self):
-        raw_ingredients = copy.deepcopy(self.ingredients)
-        processed_ingredients = []
-        for raw_ingredient in raw_ingredients:
-            for ing in ingredients.ingredients:
-                if ing in raw_ingredient.lower():
-                    processed_ingredients.append(ing)
-                    if not ' or ' in raw_ingredient.lower():
-                        break
-        return processed_ingredients
 
 drinks = [
     Drink('Cupid Cocktail', ['2 ounces of Sherry', '1 fresh egg', '1 teaspoon of powdered sugar', 'a little cayenne pepper'], ['Shake well', 'Strain into a medium-sized glass']),
@@ -44,4 +30,4 @@ drinks = [
 ]
 
 for drink in drinks:
-    print(drink.name, drink.get_ingredients())
+    print(drink.name)
